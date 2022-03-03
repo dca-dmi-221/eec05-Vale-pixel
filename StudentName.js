@@ -37,9 +37,8 @@ function wordSearcherIgnoreCase(targetWord, wordsList) {
   console.log(results);
 }
 
-
 let a = wordSearcherIgnoreCase(testTargetWordC, testWordsList);
-console.log(a);
+//console.log(a);
 /*3. Dado un arreglo de strings, retornar la palabra más larga,
 la más corta y el tamaño promedio, el arreglo debe ser
 entregado por parámetro y puede variar en cantidad de palabras
@@ -57,12 +56,34 @@ let testSampleList = [
 ];
 
 function wordLengthClassifier(wordsList) {
-  const getArray = Array.from(wordsList);
-  const result = getArray.filter((word) => word.length > 10);
-  console.log(result);
+  const myArray = Array.from(wordsList);
 
-  // :)
+  let organice = myArray.sort((a, b) => a.length - b.length);
+  console.log(organice);
+  let sum = 0;
+  if (organice) {
+    return myArray.length[0], sum += myArray.length;
+  }
+  console.log(myArray);
+  /*
+  let longestWord = "";
+  let shortestWord = "";
+  let sum = 0;
+  let arrayLength = getArray.length;
+
+  getArray.forEach((word) => {
+    if (word.length > longestWord.length || word.length < shortestWord.length) {
+      longestWord = word;
+      shortestWord = word;
+    }
+    sum += word.length;
+  });
+  console.log(sum / getArray.length);
+  return { longestWord };
+  // return shortestWord;
+  */
 }
+
 let result = wordLengthClassifier(testSampleList);
 console.log(result);
 
