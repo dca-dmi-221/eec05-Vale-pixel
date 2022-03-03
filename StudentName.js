@@ -61,8 +61,9 @@ function wordLengthClassifier(wordsList) {
   let organice = myArray.sort((a, b) => a.length - b.length);
   console.log(organice);
   let sum = 0;
+  
   if (organice) {
-    return myArray.length[0], sum += myArray.length;
+    return myArray.length[0], myArray.length -1,sum += myArray.length;
   }
   console.log(myArray);
   /*
